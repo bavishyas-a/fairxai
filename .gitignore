@@ -1,0 +1,7 @@
+work/
+outputs/
+ff_datasets/
+*.zip
+__pycache__/
+.venv/
+.DS_Store
