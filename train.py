@@ -80,7 +80,7 @@ def train_one(arch: str, seed: int, df, device, lr=None, max_epochs=None, quiet=
 
     set_seed(seed)
     lr = lr or C.LR[arch]
-    max_epochs = max_epochs or C.MAX_EPOCHS
+    max_epochs = max_epochs or C.MAX_EPOCHS_OVERRIDE.get(arch, C.MAX_EPOCHS)
     tr, va, _ = loaders(df, seed)
 
     model = build_model(arch).to(device)
