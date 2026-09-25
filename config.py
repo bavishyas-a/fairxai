@@ -39,9 +39,9 @@ LR = {
 
 BATCH_SIZE = 128
 WEIGHT_DECAY = 1e-4                        # applied via AdamW decoupled decay ONLY 
-MAX_EPOCHS = 12
-MAX_EPOCHS_OVERRIDE = {"swin_tiny_patch4_window7_224": 20}                    # fine-tuning pretrained nets converges in ~5-15
-PATIENCE = 3                              # early stop on val macro-F1
+MAX_EPOCHS = 25
+PATIENCE = 5
+MAX_EPOCHS_OVERRIDE = {"swin_tiny_patch4_window7_224": 30}                         # early stop on val macro-F1
 IMG_SIZE = 224
 NUM_WORKERS = 8
 
